@@ -1,6 +1,7 @@
 import { Datatype } from './datatype';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
+import { Time } from './time';
 
 export interface FakerOptions {
   locales?: string[];
@@ -153,6 +154,7 @@ export class Faker {
 
   readonly mersenne: Mersenne = new Mersenne();
   random: Random = new Random(this);
+  time: Time = new Time();
   datatype: Datatype = new Datatype(this);
 
   constructor(opts: FakerOptions = {}) {
