@@ -1,4 +1,5 @@
 import { Datatype } from './datatype';
+import { _Date } from './date';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
 
@@ -153,6 +154,7 @@ export class Faker {
 
   readonly mersenne: Mersenne = new Mersenne();
   random: Random = new Random(this);
+  readonly date: _Date = new _Date(this);
   datatype: Datatype = new Datatype(this);
 
   constructor(opts: FakerOptions = {}) {
