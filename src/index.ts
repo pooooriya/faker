@@ -1,4 +1,5 @@
 import { Datatype } from './datatype';
+import { Helpers } from './helpers';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
 
@@ -152,7 +153,8 @@ export class Faker {
   seedValue?: any[] | any;
 
   readonly mersenne: Mersenne = new Mersenne();
-  random = new Random(this);
+  random: Random = new Random(this);
+  readonly helpers: Helpers = new Helpers(this);
   datatype: Datatype = new Datatype(this);
 
   constructor(opts: FakerOptions = {}) {
